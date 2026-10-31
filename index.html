@@ -135,6 +135,20 @@
   <h1>Repositorio de MrFamous</h1>
 
   <div class="container">
+    
+    <!-- NUEVA SERIE: Fenomenoide (Arriba de Dilbert) -->
+    <div class="serie" onclick="toggleMagnet('fenomenoide')">
+      📺 Fenomenoide
+      <div id="fenomenoide" class="magnet">
+        https://shrinkme.click/Fenomenoide
+        <div class="buttons">
+          <button onclick="abrirMagnet('https://shrinkme.click/Fenomenoide', event)">Abrir</button>
+          <button onclick="copiarMagnet('https://shrinkme.click/Fenomenoide', event)">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERIE: Dilbert -->
     <div class="serie" onclick="toggleMagnet('dilbert')">
       📺 Dilbert
       <div id="dilbert" class="magnet">
@@ -145,6 +159,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   <footer>
