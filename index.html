@@ -138,6 +138,7 @@
     <div class="serie" onclick="toggleMagnet('dilbert')">
       📺 Dilbert
       <div id="dilbert" class="magnet">
+        <!-- REEMPLAZA ESTE LINK CON EL NUEVO SI LO TIENES -->
         magnet:?xt=urn:btih:8bd7748d130225bf086e47cc02840b44252c4874&dn=Dilbert
         <div class="buttons">
           <button onclick="abrirMagnet('magnet:?xt=urn:btih:8bd7748d130225bf086e47cc02840b44252c4874&dn=Dilbert', event)">Abrir</button>
@@ -145,10 +146,23 @@
         </div>
       </div>
     </div>
+    
+    <!-- Ejemplo de cómo agregar otra serie en el futuro:
+    <div class="serie" onclick="toggleMagnet('otro')">
+      📺 Otra Serie
+      <div id="otro" class="magnet">
+        magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie
+        <div class="buttons">
+          <button onclick="abrirMagnet('magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie', event)">Abrir</button>
+          <button onclick="copiarMagnet('magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie', event)">Copiar</button>
+        </div>
+      </div>
+    </div>
+    -->
   </div>
 
   <footer>
-    <p>Tu sitio personal de series – creado con ❤️ y GitHub Pages</p>
+    <p>Tu sitio personal de series – creado con ❤️ y Cloudflare Pages</p>
   </footer>
 
   <script>
@@ -160,7 +174,7 @@
 
     /* Abrir magnet link */
     function abrirMagnet(url, event) {
-      event.stopPropagation(); // evita que se cierre
+      event.stopPropagation(); // evita que se cierre al hacer clic en el botón
       window.location.href = url;
     }
 
@@ -220,4 +234,3 @@
   </script>
 </body>
 </html>
-
