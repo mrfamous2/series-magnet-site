@@ -138,27 +138,13 @@
     <div class="serie" onclick="toggleMagnet('dilbert')">
       📺 Dilbert
       <div id="dilbert" class="magnet">
-        <!-- REEMPLAZA ESTE LINK CON EL NUEVO SI LO TIENES -->
-        magnet:?xt=urn:btih:8bd7748d130225bf086e47cc02840b44252c4874&dn=Dilbert
+        https://shrinkme.click/dilbert
         <div class="buttons">
-          <button onclick="abrirMagnet('magnet:?xt=urn:btih:8bd7748d130225bf086e47cc02840b44252c4874&dn=Dilbert', event)">Abrir</button>
-          <button onclick="copiarMagnet('magnet:?xt=urn:btih:8bd7748d130225bf086e47cc02840b44252c4874&dn=Dilbert', event)">Copiar</button>
+          <button onclick="abrirMagnet('https://shrinkme.click/dilbert', event)">Abrir</button>
+          <button onclick="copiarMagnet('https://shrinkme.click/dilbert', event)">Copiar</button>
         </div>
       </div>
     </div>
-    
-    <!-- Ejemplo de cómo agregar otra serie en el futuro:
-    <div class="serie" onclick="toggleMagnet('otro')">
-      📺 Otra Serie
-      <div id="otro" class="magnet">
-        magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie
-        <div class="buttons">
-          <button onclick="abrirMagnet('magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie', event)">Abrir</button>
-          <button onclick="copiarMagnet('magnet:?xt=urn:btih:TU_HASH_AQUI&dn=Otra+Serie', event)">Copiar</button>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 
   <footer>
@@ -166,26 +152,26 @@
   </footer>
 
   <script>
-    /* Mostrar/ocultar magnet link */
+    /* Mostrar/ocultar enlace */
     function toggleMagnet(id) {
       const magnet = document.getElementById(id);
       magnet.classList.toggle("show");
     }
 
-    /* Abrir magnet link */
+    /* Abrir enlace */
     function abrirMagnet(url, event) {
       event.stopPropagation(); // evita que se cierre al hacer clic en el botón
       window.location.href = url;
     }
 
-    /* Copiar magnet al portapapeles */
+    /* Copiar enlace al portapapeles */
     async function copiarMagnet(url, event) {
       event.stopPropagation();
       try {
         await navigator.clipboard.writeText(url);
-        alert("✅ Magnet copiado al portapapeles");
+        alert("✅ Enlace copiado al portapapeles");
       } catch (err) {
-        alert("❌ No se pudo copiar el magnet");
+        alert("❌ No se pudo copiar el enlace");
       }
     }
 
