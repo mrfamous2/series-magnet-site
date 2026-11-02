@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Series Magnet Links</title>
   
-  <!-- Cloudflare Web Analytics -->
+  <!-- Cloudflare Web Analytics (Invisible, para estadísticas detalladas) -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dfa8577f63c04bd09aed80fcb5e4d9b2"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 
   <style>
     html, body {
@@ -130,6 +129,18 @@
       position: relative;
       z-index: 2;
       animation: fadeIn 2s ease;
+      padding-bottom: 20px;
+    }
+    
+    /* Estilo para el contador visible */
+    .contador-visitas {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
   </style>
 </head>
@@ -181,6 +192,12 @@
 
   <footer>
     <p>Tu sitio personal de series – creado con ❤️ y Cloudflare Pages</p>
+    
+    <!-- CONTADOR DE VISITAS VISIBLE -->
+    <div class="contador-visitas">
+      👁️ Visitas totales: 
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=mrfamous2.series-magnet-site" alt="contador de visitas" style="vertical-align: middle; border-radius: 4px;" />
+    </div>
   </footer>
 
   <script>
